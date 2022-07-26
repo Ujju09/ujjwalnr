@@ -4,6 +4,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Script from "next/script";
+import Image from "next/image";
 
 const Resource = ({ records }) => {
   return (
@@ -36,7 +37,7 @@ const Resource = ({ records }) => {
                 answer-attachments={
                   records[index].fields.hasOwnProperty("AnswerImage") === true
                     ? [records[index].fields["AnswerImage"][0].url]
-                    : []
+                    : null
                 }
               ></orbit-prompt>
             );
