@@ -33,7 +33,11 @@ const Resource = ({ records }) => {
                 key={index}
                 question={records[index].fields["Question"]}
                 answer={records[index].fields["Answer"]}
-                answer-attachments={records[index].fields["AnswerImage"][0].url}
+                answer-attachments={
+                  records[index].fields.hasOwnProperty("AnswerImage") === true
+                    ? [records[index].fields["AnswerImage"][0].url]
+                    : []
+                }
               ></orbit-prompt>
             );
           })}
