@@ -28,6 +28,14 @@ const Home: NextPage = () => {
             <h3 >Learning resources</h3>
             </a>
           </Link>
+          <Link href= "http://hyperphysics.phy-astr.gsu.edu/hbase/index.html" >
+            <a className={styles.card}>
+
+            <h3 style={{
+              textAlign: "center"
+            }} >HyperPhysics: Everything Physics</h3>
+            </a>
+          </Link>
          
           
         </div>
