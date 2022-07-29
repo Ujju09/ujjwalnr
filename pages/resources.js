@@ -57,7 +57,7 @@ export async function getServerSideProps() {
   const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
   const TABLE_KEY = process.env.NEXT_PUBLIC_TABLE_KEY;
   const res = await fetch(
-    `https://api.airtable.com/v0/${TABLE_KEY}/Ujjwal?maxRecords=20&view=Grid%20view`,
+    `https://api.airtable.com/v0/${TABLE_KEY}/Ujjwal?maxRecords=100&view=Grid%20view`,
     {
       headers: { Authorization: `Bearer ${API_KEY}` },
     }
